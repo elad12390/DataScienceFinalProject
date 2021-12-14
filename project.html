@@ -14263,7 +14263,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><h4>Defining our problem</h4></p>
+<p><h4>נושא המחקר</h4></p>
 <p><table dir="rtl">
     <tr>
         <th>
@@ -14302,7 +14302,7 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><h4>Defining our problem</h4></p>
+<p><h4>נתוני המחקר ודרכי ניתוח</h4></p>
 <p><table dir="rtl">
     <tr>
         <th>
@@ -14317,10 +14317,15 @@ a.anchor-link {
         פירוט הנתונים: פרטים פיננסיים הוא נמכר בזמן X ואז לחזות בכמה הוא ימכר בזמן Y ובנוסף פרטים על המשחק - כמו שם, ז'אנר פופולריות וכו'.
         </td>
         <td>
-        נשתמש ב-Crawling על אתר isThereAnyDeal ונייבא משם את כל המידע הדרוש כדי לחזות את המחיר של משחק בעוד X זמן מסוים.
-        בעזרת STEAM API נוציא את ז'אנר המשחק, שנת הייצור ועוד פרטים שיסייעו לנו לחזות את המחיר.
-        כדי לא לקבל הודעת שגיאה על שימוש יתר, נשתמש ב-PROXY כדי לא להחסם ע"י isThereAnyDeal
-        נכון לעכשיו, נכוון ל-100 המשחקים הראשונים ותוך כדי מהלך הפרוייקט נגדיל את המספר ל-N המספרים הראשונים.
+            <p style="font-size: 1.1rem">
+                נשתמש ב-Crawling על אתר isThereAnyDeal(Fig.3)<br/>
+                כדי לא לקבל הודעת שגיאה על שימוש יתר, נשתמש ב-PROXY כדי לא להחסם ע"י isThereAnyDeal<br/>
+                ונייבא משם את כל המידע הדרוש כדי לחזות את המחיר של משחק בעוד X זמן מסוים.<br/>
+                ראינו שלכל משחק קיים באיזור ה1000+ (Fig.2) רשומות של log (Fig.1) של המחיר שלו ביחס לזמן, ולחנות בה הוא נמכר ואת העלייה\ירידה במחיר של המשחק ביחד ללוג הקודם.<br/>
+                בעזרת STEAM API נוציא את ז'אנר המשחק, שנת הייצור ועוד פרטים מורכבים יותר על המשחק עצמו<br/>
+                ולבסוף נצרף לכל לוג את פרטי המשחק ונקבל Dataset בגודל n = כמות המשחקים, x = כמות הלוגים, כלומר n*x<br/>
+                אנחנו מעוניינים כרגע לקחת את 100 המשחקים הראשונים ולפי מה שראינו כמות הלוגים בדרך כלל היא לפחות 1000 אז נקבל בסביבות ה100,000+ רשומות.<br/>
+            </p>
         </td>
     </tr>
     <tr>
@@ -14328,12 +14333,34 @@ a.anchor-link {
         דרכי ניתוח: נשתמש בכלים שלמדנו במהלך הקורס לעבד\ללמוד מהנתונים כמה מידע שאנו צריכים למטרה זו
         </td>
         <td>
-        ננתח את הDataFrame, בעזרת טבלאות יחסי משתנים, סטטיסטיקות, ולבסוף ננסה ללמד מכונה שתחזה את התאריך של המחיר הזול ביותר בשנה מסוימת, ואת המחיר אשר יביא את כמות המכירות הגדול ביותר
+            <p style="font-size: 1.1rem">
+                ננתח את הDataFrame, בעזרת טבלאות יחסי משתנים, סטטיסטיקות, ולבסוף ננסה ללמד מכונה שתחזה את התאריך של המחיר הזול ביותר בשנה מסוימת, ואת המחיר אשר יביא את כמות המכירות הגדול ביותר
+            </p>
         </td>
     </tr>
 </table>
 <br/></p>
-
+<p><table style="width:100%;grid-template-rows: 1fr 1fr 1fr;"></p>
+<tr>
+    <td>
+        <figure>
+            <img src="images\log_table_for_ds3.png" alt="Is there any deal log table">
+            <figcaption>Fig.1 - The main crawled data source</figcaption>
+        </figure>
+    </td>
+    <td>
+        <figure>
+            <img src="images\number_of_logs_for_ds3.png" alt="Example for number of rows in a typical game">
+            <figcaption>Fig.2 - Example for number of rows in a typical game (Dark souls 3) </figcaption>
+        </figure>
+    </td>
+    <td>
+        <figure>
+            <img src="images\is_there_any_deal_site_example_ds3.png" alt="Is there any deal game page">
+            <figcaption>Fig.3 - IsThereAnyDeal game page</figcaption>
+        </figure>
+    </td>
+</tr>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
