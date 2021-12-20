@@ -1,1 +1,3 @@
 .venv
+games/**
+steam_api_details/**
