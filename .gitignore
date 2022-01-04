@@ -1,3 +1,4 @@
 .venv
 games/**
 steam_api_details/**
+.ipynb_checkpoints
