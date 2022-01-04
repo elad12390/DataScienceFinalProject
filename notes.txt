@@ -1,0 +1,2 @@
+To run jupyter notebook do
+python -m notebook
