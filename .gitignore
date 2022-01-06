@@ -1,4 +1,7 @@
 .venv
-games/**
-steam_api_details/**
+
+cache/**
+
+results/**
+
 .ipynb_checkpoints
