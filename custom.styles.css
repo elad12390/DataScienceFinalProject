@@ -20,3 +20,7 @@ body {
 *[dir="rtl"] * {
     text-align: right !important;
 }
+
+.jp-Notebook .jp-Cell .jp-InputPrompt {
+    cursor: auto !important;
+}
