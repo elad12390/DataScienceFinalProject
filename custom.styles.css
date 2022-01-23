@@ -1,0 +1,22 @@
+#subject_title {
+    direction: rtl;
+    text-align: right;
+}
+
+table {
+    width: 100%;
+}
+
+table[dir="rtl"] {
+    width: 100%;
+    direction: rtl;
+    text-align: right;
+}
+
+body {
+    padding: 0 calc(80px + 75px) !important;
+}
+
+*[dir="rtl"] * {
+    text-align: right !important;
+}
